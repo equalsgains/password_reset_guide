@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Password Reset</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
+</head>
+
+<body>
+    <button id="faqs" class="btn">FAQs</button>
+    <span id="top"></span>
+    <div id="overlay" onclick="off()">
+        <div id="text">
+            <ol>
+                <li>Can I give the password over the phone?
+                    <ul>
+                        <li><span class="redText">Answer: </span>Only for this institution, yes!</li>
+                    </ul>
+                </li>
+                <li>Can I reset a password for an admin?
+                    <ul>
+                        <li><span class="redText">Answer: </span>You didn't read the KB, or did you? This is a big no!</li>
+
+                    </ul>
+                </li>
+                <li>User did not have, or had the wrong information. What do I do?
+                    <ul>
+                        <li><span class="redText">Answer: </span>If you tried everything, and was still not able to reset the
+                            password, please send the ticket to their school and let the user know they will be in contact
+                            with them to further assist them with their credentials.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <li>Navigate to the website <a class="wBck" href="https://etools.edukgroup.com/vpn/index.html" target="_blank">Netscaler Gateway.</a>            Here are the credentials to log in:
+            <ul>
+                <li>Username: <input type="text" id="copy-username" value="username"><input id="copy1" value="copy" type="submit"
+                        class="btn"><span class="redText hideItem" id="copied1"><img class="checkIcon" src="check-icon.png"></span></li>
+                <li>Password: <input type="text" id="copy-password" value="password"><input id="copy2" value="copy" type="submit"
+                        class="btn"><span class="redText hideItem" id="copied2"><img class="checkIcon" src="check-icon.png"></span></li>
+            </ul>
+        </li>
+        <div id="vegeta">
+            <img src="vegeta.png">
+        </div>
+        <!-- intro start -->
+        <div id="intro">
+
+            <h1>NUC/IBANCA/FTC Password Reset</h1>
+            <p>A Complete Step by Step Guide - <span>by Luis Quintanilla</span></p>
+            <hr>
+            <button id="start" class="btn">Let's Go!</button>
+        </div>
+        <!-- intro end -->
+
+        <!-- step1 div -->
+        <div id="step1" class="hideItem">
+            <h3>Step 1</h3>
+            <h1>Citrix</h1>
+            <p>You will need to install Citrix if this is your first time</p>
+            <a href="https://www.citrix.com/downloads/citrix-receiver/" target="_blank"><button id="getC" class="btn">Download & Install HERE</button></a>
+            <div class="imgContainer">
+                <img src="http://gph.to/2uijEdB">
+            </div>
+            <button id="next2" class="btn">NEXT STEP</button>
+        </div>
+
+        <!-- step1 div end -->
+
+        <!-- step 2 start -->
+        <div id="step2" class="hideItem">
+            <h3>Step 2</h3>
+            <h1 class="centered">Choose a Roll</h1>
+            <div class="row">
+                <div class="student" id="nextStudent">
+                    <img src="student.png" alt="">
+                    <h3>Student</h3>
+                </div>
+                <div class="teacher" id="nextTeacher">
+                    <img src="teacher.png" alt="">
+                    <h3>Teacher</h3>
+                </div>
+            </div>
+        </div>
+        <!-- step 2 end -->
+
+        <!-- Step 4s - Student Verification Required!!! -->
+        <div id="step4s" class="hideItem">
+            <h3>Step 4</h3>
+            <h1 class="centered">VERIFICATION <span id="importantMessage" class="animated infinite flash">REQUIRED!!!</span></h1>
+            <h2>Please collect the following from the student:</h2>
+            <h3 class="centered noBorder">If the student fails to provide the correct information in one of theses items, then Proceed to <span class="wBck"> Verification Phase 2</span></h3>
+            <ol id>
+                <li onclick="checked()"><label for="1"><input id="1" type="checkbox">The student must provide his/her Full Name (Last Name & First Name) <span class="redText">Required</span></label></li>
+                <li onclick="checked()"><label for="2"><input id="2" type="checkbox"> The student must provide his/her Student Number (8 or 10 Digits) or  <span class="redText">Required</span></label></li>
+                <li onclick="checked()"><label for="3"><input id="3" type="checkbox">The student must provide his/her Physical Address (All Address, City, Country, Zip
+                    Code) <span class="redText">Required</span></label></li>
+                <li onclick="checked()"><label for="4"><input id="4" type="checkbox">The student must provide his/her D.O.B <span class="redText">Required</span></label></li>
+                <li onclick="checked()"><label for="5"><input id="5" type="checkbox">If the Campus Vue system shows an email in the Other email field, ask the student to provide it. If the Other email field is empty proceed to Verification Phase II. (Required)<span class="redText">Required</span></label></li>
+                <ul>
+                    <li><img src="student1.png">
+                    </li>
+                </ul>
+            </ol>
+
+            <a href="#verifiedS"><button class="btn" id="phase2Needed">CLICK HERE FOR PHASE 2 IF THE STUDENT DOES NOT HAVE THE REQUIRED INFORMATION</button></a>
+            <div id="phase2Container" class="hideItem">
+                <ol>
+                    <li onclick="checked()"><label for="6"><input type="checkbox" id="6"> Student must provide the last 4 digits of his/her Social Security Number (Located under PIN field) (Validate and Confirm) (located in the top right corner of the screen)</label>
+                    </li>
+                    <ul>
+                        <li><img src="pin.png"></li>
+                    </ul>
+                </ol>
+            </div>
+
+
+            <hr>
+            <h2 class="centered">DO <span class="redText">NOT</span> PROCEED WITHOUT THE REQUIRED INFO</h2>
+            <button id="verifiedS" class="btn cursorDisabled">COLLECT INFO BEFORE PROCEEDING</button>
+        </div>
+        <!-- Step 4s - Student Verification Required!!! END -->
+
+        <!-- step 3s Start -->
+        <div id="step3s" class="hideItem">
+            <h3>Step 3</h3>
+            <h1>System Access to Verify Personal Info</h1>
+            <ol>
+
+                <li>Navigate to the website <a class="wBck" href="https://etools.edukgroup.com/vpn/index.html" target="_blank">Netscaler Gateway.</a>                    Credentails above ^ .Once authenticated you will see the following page. You will want to select Virtual
+                    App and Desktop Access.
+                    <ul>
+                        <li><img src="virtualApp.png"></li>
+                    </ul>
+                </li>
+                <li>You will then want to select the CampusNexus Student Icon. Upon clicking the icon you will need to authenticate
+                    again with the same credentials as before. User name should already be populated, but you will need to
+                    provide the password.
+                    <ul>
+                        <li><img src="campusNexus.png"></li>
+                    </ul>
+                </li>
+                <li>You should then view the CampusNexus student page. You will want to select student under the "Find" menu.
+                    <ul>
+                        <li><img src="findStudent.png"></li>
+                    </ul>
+                </li>
+                <li>From the "Campus" navigation drop down select "All Campuses in Database" for the directory of all students
+                    or you can narrow your search by selecting their specific campus.
+                    <ul>
+                        <li><img src="database.png"></li>
+                    </ul>
+                </li>
+                <li>Once the campus has been selected you can search for the user by entering in the Student ID, First Name and
+                    both Last Names. When the correct user appears at the bottom, select it by double clicking on the name.
+                    <ul>
+                        <li><img src="search.png"></li>
+                    </ul>
+                </li>
+            </ol>
+            <a href="#top"><button id="nextVerification" class="btn">NEXT</button></a>
+        </div>
+        <!-- step 3s End -->
+
+
+        <!-- step 5s start -->
+        <div id="step5s" class="hideItem">
+            <h3>Step 5</h3>
+            <h1>Change Student's Password</h1>
+            <ol>
+                <li>Navigate to the website <a class="wBck" href="https://etools.edukgroup.com/vpn/index.html" target="_blank">Netscaler Gateway.</a>                    Credentails above ^. Once authenticated, you will want to slect Virtual App and Desktop Access
+                    <ul>
+                        <li><img src="virtualApp.png"></li>
+                    </ul>
+                </li>
+                <li>You will want to select the Academic Active Directory
+                    <ul>
+                        <li><img src="ActiveDirectory.png"></li>
+                    </ul>
+                </li>
+                <li>Works best if you right click, then paste, rather than using CMD + V for the password ^.
+                    <ul>
+                        <li><img src="paste.png">
+                            <ul>
+                                <li>If you ever receive this message after pasting the password in the MS-DOS window, click ok,
+                                    then close the Active Directory window and try again.
+                                    <ul>
+                                        <img src="error.png">
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Navigate to "Actions" > "Find", then select "edukmail.local"
+                    <ul>
+                        <li>You can search by student number or name, but works best if you search it by the first part of their
+                            email before @stu... (e.g firstInitLastName01234)</li>
+                        <li><img src="local.png"></li>
+                    </ul>
+                </li>
+                <li>The user will appear at the bottom if found. Right click in order to reset password for the user
+                    <ul>
+                        <li><img src="found.png"></li>
+                    </ul>
+                </li>
+                <li>Un-check the first option, then check select the second option as shown HERE:
+                    <ul>
+                        <li>Password Reset Example: First letter from name + firs letter from last name + last 4 digits of student
+                            number. (fa4567)</li>
+                        <li><img src="reset.png"></li>
+                    </ul>
+                </li>
+                <li>Finally! Request the Student to provide his/her personal email to which the new password will be sent. Also,
+                    update the student profile in CANVAS with the students personal email or instruct the student to do so
+                    for future validations.
+                    <ul>
+                        <li>You may also provide them with their password over the phone once verified (this instituion only!)</li>
+                        <li>If it's a ticket, or chat, you still need to validate their info, then send their passowrd to their
+                            personal, and school's email</li>
+                        <li>Do <span class="redText">NOT</span> provide password over a chat conversation. (Call or email only!)</li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="pandaContainer">
+                <img src="https://media.giphy.com/media/xkhn6Ry4taRtC/giphy.gif">
+            </div>
+        </div>
+
+        <!-- step 5s end -->
+
+    </div>
+    <script src="scripts.js">
+
+    </script>
+</body>
+
+</html>
