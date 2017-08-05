@@ -184,6 +184,18 @@ input#copy1, input#copy2 {
     color: #fff;
     height: 25px;
     border: solid 1px white;
+    width: 50px;
+    font-size: .9em;
+}
+
+input#copy1:hover, input#copy2:hover {
+    display: inline-block;
+    background-color: transparent;
+    color: #00589B;
+    height: 25px;
+    border: solid 1px #00589B;
+    width: 50px;
+    background: #fff;
 }
 
 .checkIcon {

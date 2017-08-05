@@ -104,11 +104,27 @@ copyUserNameBtn.addEventListener('click', function () {
     userName.select();
     document.execCommand('copy');
     copied1.classList.remove('hideItem');
+    copied1.classList.add('animated', 'fadeIn');
+    setTimeout(function () {
+        copied1.classList.add('animated', 'fadeOut');
+    }, 500)
+    setTimeout(function () {
+        copied1.classList.add('hideItem');
+    }, 1300)
+
+
 });
 copyPassword.addEventListener('click', function () {
     password.select();
     document.execCommand('copy');
     copied2.classList.remove('hideItem');
+    copied2.classList.add('animated', 'fadeIn');
+    setTimeout(function () {
+        copied2.classList.add('animated', 'fadeOut');
+    }, 500)
+    setTimeout(function () {
+        copied2.classList.add('hideItem');
+    }, 1300)
 });
 
 phase2Needed.addEventListener('click', function () {
@@ -144,6 +160,7 @@ verifiedT.addEventListener('click', function () {
     step3t.classList.add('animated', 'slideOutLeft');
     setTimeout(function () {
         step3t.classList.add('hideItem');
-        
+        step4t.classList.remove('hideItem');
+        step4t.classList.add('animated', 'fadeInDownBig');
     }, 750)
 });
