@@ -28,6 +28,8 @@ var phase2Container = document.getElementById('phase2Container');
 var faqs = document.getElementById('faqs');
 var credentials = document.getElementById('credentials');
 var step5s = document.getElementById('step5s');
+var nextTeacher = document.getElementById('nextTeacher');
+var step3t = document.getElementById('step3t');
 
 statBTN.addEventListener("click", function () {
     intro.classList.add("animated", "bounceOut");
@@ -125,6 +127,23 @@ function on() {
 function off() {
     document.getElementById("overlay").style.display = "none";
 }
-// faqs.addEventListener('click', function () {
-//     on();
-// });
+
+nextTeacher.addEventListener('click', function () {
+    step2.classList.add("animated", "slideOutLeft");
+    credentials.classList.remove('hideItem');
+    setTimeout(function () {
+        step2.classList.add('hideItem');
+        step3t.classList.remove('hideItem');
+        step3t.classList.add('animated', 'fadeIn');
+    }, 750)
+
+});
+
+verifiedT.addEventListener('click', function () {
+    alert('I have verified their identity by checking their courses in Canvas');
+    step3t.classList.add('animated', 'slideOutLeft');
+    setTimeout(function () {
+        step3t.classList.add('hideItem');
+        
+    }, 750)
+});
