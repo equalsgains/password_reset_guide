@@ -26,8 +26,12 @@ var nextVerification = document.getElementById('nextVerification');
 var phase2Needed = document.getElementById('phase2Needed');
 var phase2Container = document.getElementById('phase2Container');
 var faqs = document.getElementById('faqs');
+var credentials = document.getElementById('credentials');
+var step5s = document.getElementById('step5s');
+
 statBTN.addEventListener("click", function () {
     intro.classList.add("animated", "bounceOut");
+    credentials.classList.add('hideItem');
     setTimeout(function () {
         intro.classList.add("hideItem");
         step1.classList.remove('hideItem');
@@ -45,22 +49,32 @@ next2.addEventListener('click', function () {
 });
 nextStudent.addEventListener("click", function () {
     step2.classList.add("animated", "slideOutLeft");
+    credentials.classList.remove('hideItem');
     setTimeout(function () {
         step2.classList.add('hideItem');
         step3s.classList.remove('hideItem');
         step3s.classList.add("animated", "fadeInDownBig");
     }, 750)
+    credentials.classList.add('animated', 'fadeIn');
     setTimeout(function () {
         warning.classList.remove('infinite');
     }, 7700)
 });
 verifiedS.addEventListener('click', function () {
-    if (verifiedS.indeOf('yay') !== -1) {
-        alert("HOLD YOUR HORSES! Make sure to verify their info");
+    if (one.checked === true && two.checked === true && three.checked === true && four.checked === true && five.checked === true || six.checked === true) {
+        step4s.classList.add("animated", "slideOutLeft");
+        window.scroll(0, 0);
+        setTimeout(function () {
+            step4s.classList.add('hideItem');
+            step5s.classList.remove('hideItem');
+            step5s.classList.remove('animated', 'bouceInUp');
+        }, 750)
+
     }
 });
 nextVerification.addEventListener('click', function () {
     step3s.classList.add('animated', "slideOutLeft");
+    window.scroll(0, 0);
     setTimeout(function () {
         step3s.classList.add('hideItem');
         step4s.classList.remove('hideItem');
@@ -82,7 +96,7 @@ function checked() {
     } else {
         verifiedS.textContent = "COLLECT INFO BEFORE PROCEEDING";
         verifiedS.classList.add('cursorDisabled');
-    } 
+    }
 }
 copyUserNameBtn.addEventListener('click', function () {
     userName.select();
@@ -111,6 +125,6 @@ function on() {
 function off() {
     document.getElementById("overlay").style.display = "none";
 }
-faqs.addEventListener('click', function(){
-    on();
-});
+// faqs.addEventListener('click', function () {
+//     on();
+// });
