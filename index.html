@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <button id="faqs" class="btn">FAQs</button>
     <span id="top"></span>
+    <button onclick="on()" class="btn">FAQs</button>
     <div id="overlay" onclick="off()">
         <div id="text">
             <ol>
@@ -37,14 +37,16 @@
         </div>
     </div>
     <div class="mainContainer">
-        <li>Navigate to the website <a class="wBck" href="https://etools.edukgroup.com/vpn/index.html" target="_blank">Netscaler Gateway.</a>            Here are the credentials to log in:
-            <ul>
-                <li>Username: <input type="text" id="copy-username" value="username"><input id="copy1" value="copy" type="submit"
-                        class="btn"><span class="redText hideItem" id="copied1"><img class="checkIcon" src="check-icon.png"></span></li>
-                <li>Password: <input type="text" id="copy-password" value="password"><input id="copy2" value="copy" type="submit"
-                        class="btn"><span class="redText hideItem" id="copied2"><img class="checkIcon" src="check-icon.png"></span></li>
-            </ul>
-        </li>
+        <div id="credentials">
+            <li>Navigate to the website <a class="wBck" href="https://etools.edukgroup.com/vpn/index.html" target="_blank">Netscaler Gateway.</a>                Here are the credentials to log in:
+                <ul>
+                    <li>Username: <input type="text" id="copy-username" value="username"><input id="copy1" value="copy" type="submit"
+                            class="btn"><span class="redText hideItem" id="copied1"><img class="checkIcon" src="check-icon.png"></span></li>
+                    <li>Password: <input type="text" id="copy-password" value="password"><input id="copy2" value="copy" type="submit"
+                            class="btn"><span class="redText hideItem" id="copied2"><img class="checkIcon" src="check-icon.png"></span></li>
+                </ul>
+            </li>
+        </div>
         <div id="vegeta">
             <img src="vegeta.png">
         </div>
@@ -83,7 +85,7 @@
                 </div>
                 <div class="teacher" id="nextTeacher">
                     <img src="teacher.png" alt="">
-                    <h3>Teacher</h3>
+                    <h3>faculty</h3>
                 </div>
             </div>
         </div>
@@ -108,7 +110,7 @@
                 </ul>
             </ol>
 
-            <a href="#verifiedS"><button class="btn" id="phase2Needed">CLICK HERE FOR PHASE 2 IF THE STUDENT DOES NOT HAVE THE REQUIRED INFORMATION</button></a>
+            <button class="btn" id="phase2Needed">CLICK HERE FOR PHASE 2 IF THE STUDENT DOES NOT HAVE THE REQUIRED INFORMATION</button>
             <div id="phase2Container" class="hideItem">
                 <ol>
                     <li onclick="checked()"><label for="6"><input type="checkbox" id="6"> Student must provide the last 4 digits of his/her Social Security Number (Located under PIN field) (Validate and Confirm) (located in the top right corner of the screen)</label>
@@ -130,7 +132,7 @@
         <div id="step3s" class="hideItem">
             <h3>Step 3</h3>
             <h1>System Access to Verify Personal Info</h1>
-            <ol>
+            <ol id="systemAccess">
 
                 <li>Navigate to the website <a class="wBck" href="https://etools.edukgroup.com/vpn/index.html" target="_blank">Netscaler Gateway.</a>                    Credentails above ^ .Once authenticated you will see the following page. You will want to select Virtual
                     App and Desktop Access.
@@ -163,7 +165,7 @@
                     </ul>
                 </li>
             </ol>
-            <a href="#top"><button id="nextVerification" class="btn">NEXT</button></a>
+            <button id="nextVerification" class="btn">NEXT</button>
         </div>
         <!-- step 3s End -->
 
@@ -227,12 +229,32 @@
                     </ul>
                 </li>
             </ol>
+            <button onclick="on()" class="btn">FAQs</button>
             <div class="pandaContainer">
                 <img src="https://media.giphy.com/media/xkhn6Ry4taRtC/giphy.gif">
             </div>
         </div>
 
         <!-- step 5s end -->
+
+        <!-- step 3t start  -->
+        <div id="step3t" class="hideItem">
+            <h3>Step 3</h3>
+            <h1 class="centered">Validate old courses taught in Canvas for identification purposes </h1>
+            <button id="verifiedT" class="btn">Next</button>
+        </div>
+        <!-- step 3t end -->
+
+        <div id="step4t" class="">
+            <ol>
+                <li>Navigate to the website <a class="wBck" href="https://etools.edukgroup.com/vpn/index.html" target="_blank">Netscaler Gateway.</a>                    Credentails above ^ .Once authenticated you will see the following page. You will want to select Virtual
+                    App and Desktop Access.
+                    <ul>
+                        <li><img src="virtualApp.png"></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
 
     </div>
     <script src="scripts.js">
